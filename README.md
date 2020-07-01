@@ -33,7 +33,7 @@ Tem uma imagem com comandos do editor 'vi' (que cai na certificação Linux), qu
 
 * editor VIM.  
 
-Aqui vc também encontramos alguns comandos para instalação, e configuração do [Servidor-Debian-9]()
+Aqui vc também encontramos alguns comandos para instalação, e configuração do [Servidor-Debian-8](https://github.com/mlssystem/comandos/blob/master/servidor-debian-8.md)
  
 Não se esqueçam que JESUS voltará para buscar todos aqueles que creem! Meditem na palavra de Jesus no evangelho de João capitulo 14.
 
