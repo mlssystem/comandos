@@ -1,6 +1,6 @@
-### HABILITAR NO VIRTUALBOX A CONEXÃO NAT E REDE INERNA DEBIAN-8
+### HABILITAR NO VIRTUALBOX A CONEXÃO NAT E REDE INERNA NO ADAPITADOR 2 (DEBIAN-8).
 
-#### Os passos abaixo foram usados após a instalação do servidor Debian-8 com a configuração de Rede no VirtualBox desabilitada
+#### Os passos abaixo foram usados após a instalação do servidor Debian-8 com a configuração de Rede no VirtualBox cabo desconectado
 
 Esse é o caminho no caso da rede, para editar o arquivo 
 
