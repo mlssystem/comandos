@@ -6,10 +6,10 @@
  
  **Obs:** Em "alguns" arquivos também consta o link da fonte de pesquisa. 
 
-Tem uma imagem com comandos do editor 'vi' (que cai na certificação Linux), que achei _massa_, descolei ela em um curso no site https://www.aulaead.com/  se quiserem dar uma ¬olhada! Não precisa procurar... é só clicar --> [comandos-editor-vi]() que abrirá a imagem para conferir.
+Tem uma imagem com comandos do editor 'vi' (que cai na certificação Linux), que achei _massa_, descolei ela em um curso no site https://www.aulaead.com/  se quiserem dar uma ¬olhada! Não precisa procurar... é só clicar --> [comandos-editor-vi](https://github.com/mlssystem/comandos/blob/master/img/linux-cube.jpg) que abrirá a imagem para conferir.
 
  
-**Obs:** Amados, essa [IMAGEM]() tem vários comandos. Por exemplo: 
+**Obs:** Amados, essa [IMAGEM](https://github.com/mlssystem/comandos/blob/master/img/wallpaper-comandos-Linux-AulaEAD.jpg) tem vários comandos. Por exemplo: 
 
 * comandos-de-arquivos,  
 
