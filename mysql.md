@@ -5,7 +5,7 @@
 ## COMANDOS RELACIONADOS AO USUÁRIO
 * CRIANDO USUARIO
 ```
-MariaDB [(none)]> CREATE USER 'mlssystem'@'localhost' IDENTIFIED BY 'senha'
+MariaDB [(none)]> CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha'
 ```
 * DELETANDO USUÁRIOS
 ```
@@ -150,11 +150,11 @@ mysqlshow -vv -u root -p db_Biblioteca ‘t*’
 ```
 mysqlshow -u root -p db_Biblioteca tbl_autores ID_autor
 ```
-]
+
 Obs.: Usamos % no final do comando para que o shell não interprete tbl_autores como wildcard, e sim como o parâmetro tabela; esse problema ocorre quando temos o caractere underline (_) no nome da tabela.
 
 
-# COMANDOS RELACIONADOS A SERVIÇOS
+## COMANDOS RELACIONADOS A SERVIÇOS
 * Instalar o MySQL
 ```
 sudo apt-get install mysql-server
