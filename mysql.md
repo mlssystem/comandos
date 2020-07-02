@@ -3,6 +3,8 @@
 # [_MySQL_]()
 
 ## COMANDOS RELACIONADOS AO USUÁRIO
+font: arquivos pessoais de diversas consultas na internet, nem sempre salvo o link, ia salvando no notpad, mas os que tiverem o link, faço qusteão de postar.
+
 * CRIANDO USUARIO
 ```
 MariaDB [(none)]> CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha'
@@ -105,6 +107,8 @@ SHOW GRANTS FOR root@localhost;
 ```
 
 ## Comando DESCRIBE
+fonte: [Boson Treinamentos](http://www.bosontreinamentos.com.br/mysql/mysql-comandos-show-describe-e-mysqlshow-39/)
+
 * O comando DESCRIBE é um atalho para o comando SHOW COLUMNS FROM;
    * Exemplo:
 ```
@@ -117,6 +121,8 @@ DESC tbl_Livro;
 Obs. O comando DESCRIBE não suporta as cláusulas LIKE e WHERE.
 
 ### Comando mysqlshow
+fonte: [Boson Treinamentos](http://www.bosontreinamentos.com.br/mysql/mysql-comandos-show-describe-e-mysqlshow-39/)
+
 
 * O comando mysqlshow opera diretamente no shell do Linux. Ele permite obter informações sobre os bancos de dados, tabelas e colunas.
 
@@ -155,6 +161,8 @@ Obs.: Usamos % no final do comando para que o shell não interprete tbl_autores 
 
 
 ## COMANDOS RELACIONADOS A SERVIÇOS
+fonte: meus arquivos
+
 * Instalar o MySQL
 ```
 sudo apt-get install mysql-server
