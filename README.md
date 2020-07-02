@@ -1,4 +1,4 @@
-# Alguns comandos Linux, MySQL, Mariadb, e do editor Vi. 
+# [Alguns comandos Linux, MySQL, Mariadb, e do editor Vi.](https://mlssystem.github.io/comandos/) 
  
 #### Para iniciantes como eu, segue alguns comandos do S.O [Linux](https://github.com/mlssystem/comandos/blob/master/404.md), banco de dados do [MySQL](https://github.com/mlssystem/comandos/blob/master/mysql.md), e esse comando de configuração pós instalação do [Mariadb](https://github.com/mlssystem/comandos/blob/master/mariadb.md) me ajudou muito quando testei um software JAVA no Linux. Também tem comandos do editor Vi que cai na certificação LPI.
 
