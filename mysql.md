@@ -1,6 +1,6 @@
 # [Comandos básicos Linux, MySQL, vi, MariaDB ](https://mlssystem.github.io/comandos/)
 
-# [_MySQL_]()
+# _MySQL_
 
 ## COMANDOS RELACIONADOS AO USUÁRIO
 font: arquivos pessoais de diversas consultas na internet, nem sempre salvo o link, ia salvando no notpad, mas os que tiverem o link, faço qusteão de postar.
