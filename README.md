@@ -35,7 +35,7 @@ Tem uma imagem com comandos do editor 'vi' (que cai na certificação Linux), qu
 
 Aqui vc também encontramos alguns comandos para instalação, e configuração do [Servidor-Debian-8](https://github.com/mlssystem/comandos/blob/master/servidor-debian-8.md)
  
-Não se esqueçam que JESUS voltará para buscar todos aqueles que creem! Meditem na palavra de Jesus no evangelho de [João capitulo 14](https://mlssystem.github.io/biblia.sagrada/novo_testamento/joao/joao-14.html).
+Não se esqueçam que JESUS voltará para buscar todos aqueles que creem! Meditem na palavra de Jesus no evangelho de [João capitulo 14](https://bibliasagrada.github.io/novo_testamento/joao/joao-14.html).
 
 Fiquem com Deus!
 
