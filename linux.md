@@ -1,11 +1,11 @@
-# Adicionar novo usuário
+# ADICIONAR NOVO USUÁRIO
 
 * Após criar o novo usuário ja aparecerá a opção para criação da senha
 ``` 
   adduser nome-usuario
 ```
 
-## Adicionar o usuário ao grupo sudo
+## ADICIONAR USUÁRIO AO GRUPO SUDO
 ```
   usermod -aG sudo nome-usuario
 ```
@@ -13,85 +13,112 @@
 Fonte: [Digital Ocean](https://www.digitalocean.com/community/cdtutorials/initial-server-setup-with-debian-9)
 
 ---
-# Aula 2
+# CONTEÚDO AULA-2
 * (clear) -> Limpa a tela
-* (~) <- símbolo Diretório padrão do root
-* (#) <- símbolo Logado como root usuario adim
-* ($) <- símbolo Logado como usuário
+* (~) <- Símbolo Diretório padrão do root
+* (#) <- Símbolo Logado como root usuario adim
+* ($) <- Símbolo Logado como usuário
 
 ## DESLIGAR E REINICIAR
-* (reboot) - reinicia o linux
-* (halt) - desliga
-* (shutdown -h now) - também desliga o linux
-* (shutdown -h 1) - desliga o computador em um minuto
-* (Ctrl +c) - cancela a operação
+* (reboot) - Reinicia o linux
+* (halt) - Desliga
+* (shutdown -h now) - Também desliga o linux
+* (shutdown -h 1) - Desliga o computador em um minuto
+* (Ctrl +c) - Cancela a operação
 
 ## DIVERSOS
 * (pwd) - mostra o diretorio q esta
-* (cd /) - se povimenta para raiz
-* (cd + enter) - leva ao diretório padrão d usuário + 
-* (clear) - limpa tela
-* (ls) - lista os principais diretórios do linux
-* (cd home + enter) -  vai para a pasta do home
-*  (cd ..) - volta um diretório
-* (date) - exibe data e hora
-* (cal) - calendario
-* (date;cal) - exibe dois comandos com o ponte e virgula
-* (man + comando) - descrição do comando especificado
-* (whatis) - descrição específica
-* (history) - historico dos comandos usados
-* (clear) - limpa a tela
-* (touch) - cria arquivo
-* (userad -m )
+* (cd /) - Se povimenta para raiz
+* (cd + enter) - Leva ao diretório padrão d usuário + 
+* (clear) - Limpa tela
+* (ls) - Lista os principais diretórios do linux
+* (cd home + enter) -  Vai para a pasta do home
+* (cd ..) - Volta um diretório
+* (date) - Exibe data e hora
+* (cal) - Calendario
+* (date;cal) - Exibe dois comandos com o ponte e virgula
+* (man + comando) - Descrição do comando especificado
+* (whatis) - Descrição específica
+* (history) - Historico dos comandos usados
+* (clear) - Limpa a tela
+* (touch) - Cria arquivo
 
 ## CRIAR E APAGAR DIRETÓRIO
-* (mkdir -c) - cria diretórios ex: mkdir documentos
-* (rm -r) - apaga diretorios ex: rm -r documentos
-* (rm -rf) - apaga tdo sem perguntar
+* (mkdir -c) - Cria diretórios ex: mkdir documentos
+* (rm -r) - Apaga diretorios ex: rm -r documentos
+* (rm -rf) - Apaga tdo sem perguntar
 
 ## EDITOR DE TEXTO(vi)
-* Eh o editor q cai na "certificação LPI"
-* (vi + nome do arquivo) - cria ou edita arquivo
-* (i) - para escrever em cima do cursor
-* (a) - para escrever a partir do cursor
-* (Esc:wq) - salvar e salva
-* (Esc u) - desfaz o q estava fazendo
-* (Esc:q!) - sai do arquivo sem salvar
-* (set number) - numera as linhas
+* É o editor que cai na "certificação LPI"
+* (vi + nome do arquivo) - Cria ou edita arquivo
+* (i) - Para escrever em cima do cursor
+* (a) - Para escrever a partir do cursor
+* (Esc:wq) - Salvar e salva
+* (Esc u) - Desfaz o q estava fazendo
+* (Esc:q!) - Sai do arquivo sem salvar
+* (set number) - Numera as linhas
 
 ## EDIÇÃO
-* (cat) - mostra o conbteúdo do arquivo
-* (tac + nome do arquivo) - mostra o conteudo de trás pra frente
-* (mv + nome do arquivo) - mover ou renomear o arquivo ex: mv Serviços serviços
-* (cp) - faz backup, ex: cp serviços serviços.bkp
+* (cat) - Mostra o conbteúdo do arquivo
+* (tac + Nome do arquivo) - Mostra o conteudo de trás pra frente
+* (mv + Nome do arquivo) - Mover ou renomear o arquivo ex: mv Serviços serviços
+* (cp) - Faz backup, ex: cp serviços serviços.bkp
 
 ## PESQUISA
-* (ls carta) - mostra q tem carta
-* (ls -l carta) - mostra detalhes
+* (ls carta) - Mostra q tem carta
+* (ls -l carta) - Mostra detalhes
 * DIRETORIOS SÃO PASTAS; ARQUIVOS SÃO DOCUMENTOS:
-* (ls -l) - mostra o q eh arquivo e diretorio:
-* começa com (-) - eh arquivo
-* começa com (dr) - eh diretorio
-* começa com (l) - eh link
-* (cat + nome do arquivo) -  visualiza o conteudo do arquivo
+* (ls -l) - Mostra o q eh arquivo e diretorio:
+* (ls -lh) - Mostra Permissões Links Proprietários Grupo Tamanho Data e Hora Nome
+* começa com (-) - É arquivo
+* começa com (d) - É diretorio
+* começa com (l) - É link
+* (cat + nome do arquivo) - Visualiza o conteudo do arquivo
 
 ## TECLAS DE ATALHO
-* (Pra cima) - repete o último comando
-* (Pra baixo) - idem
-* (tab) - completa comando
-* (cd ho+tab) - colpleta o comando
-* (history) - exibe os mil últimos comando digitados
+* (Pra cima) - Repete o último comando
+* (Pra baixo) - Idem
+* (tab) - Completa comando
+* (cd ho+tab) - Completa o comando
+* (history) - Exibe os mil últimos comando digitados
+
+## comando para listar upgrade
+```
+apt list --upgradeable
+```
+
+## LOCALIZAR PROGRAMAS
+```
+  dpkg -l | grep apache2 
+  dpkg -l | grep openjdk-8-jre
+```
 
 Fonte: [Professor José de Assis](https://youtu.be/agpNQ0Tv7ZU)
 
 ---
 
-# Comando kill
+## COMPACTAR ARQUIVOS
+```	
+  tar -czvf arquivo.tar.gz arquivo/
+    ou
+  tar cf arquivo.tar arquivo  
+```
+
+## DESCOMPACTAR ARQUIVOS
+```  
+  tar -xzvf arquivo.tar.gz
+    ou
+  tar xf arquivo.tar arquivo  
+```
+---  
+
+# COMANDO KILL
 * Comando para parar um processo 
    * Verifica os programas que estão sendo executados
 ```
   top 
 ```
+
 *  Mostra os programas em execução
 ``` 
   ps aux 
@@ -109,24 +136,55 @@ Fonte: Meus arquivos
 
 ---
 
-# Definir editor padrão
+# COMANDO PARA VERIFICAR A VERSÃO DO SISTEMA:
+```
+  cat /etc/*-release
+```
+
+OU ENTÃO:
+
+```
+  cat /etc/*-release | grep PRETTY
+  lsb_release -a
+  uname -r (verifica versão do Kernel)
+  uname -a
+  uname -mrs
+  uname --help
+  cat /proc/version
+```
+---
+
+# COMANDO PARA VERIFICAR INTEGRIDADE
+```
+  $ls <nomoe_programa>
+  #Sha256sum <nome_programa> | grep <numero_sha256sum>
+```
+--- 
+
+# DEDINIR EDITOR PADRÃO
 ```
   sudo update-alternatives --config editor
 ```
-# Alterar o grupo de um arquivo ou diretório - chgrp (change group)
+
+# CONFIGURAR TECLADO
+```
+	dpkg-reconfigure keyboard-configuration
+```
+
+# ALTERAR O GRUPO DE UM ARQUIVO OU DIRETÓRIO - chgrp (change group)
 
 **sintexe:**
 ```
   chgrp [novo_grupo] [nome_arquivo]
 ```
 
-# Alterar o proprietário de um arquivo ou diretório - chown (change owner)
+# ALTERAR O PROPRIETÁRIO DE UM ARQUIVO OU DIRETÓRIO - chown (change owner)
 
 **sintaxe:**
 ```
   chown [novo_proprietário] [novo_arquivo]
 ```
-# Adiciona um novo grupo - addgroup
+# ADICIONAR UM NOVO GRUPO - addgroup
 
 **sintaxe:** 
 ```
@@ -134,12 +192,12 @@ Fonte: Meus arquivos
 ```
 
 ---
-# Comando chmod- Altera permissões pelo terminal
+# COMANDO chmod - ALTERA PERMISSÃO PELO TERMINAL
 ```
   chmod +x <arquivo/diretorio>
 ```
 
-# Comando chmod - altera as permissões de acesso a arquivos e diretórios.
+# COMANDO chmod - ALTERA AS PERMISSÕES DE ACESSO A ARQUIVOS E DIRETÓRIOS
 
 **Modo de permissões octal**
 
@@ -177,7 +235,7 @@ rwx|
 ---|
 111 = 4 + 2 + 1 = 7|
 
-# Proprietário	Grupo	Outros
+# PROPRIETÁRIO | GRUPO | OUTROS
 
 rwx|rw-|rw-
 ---|---|--- 
@@ -199,8 +257,31 @@ rw-|r--|x--
 2. Grupo > lê; 
 3. Outros > lê
 
+### PERMISSÕES ###
+
+Proprietario|Grupo|Outros
+---|---|---
+rwx|r-x|r-x
+
+### SIGNIFICADOS ###
+
+* r = Read (Leitura)
+* w = Write (Escrita)
+* x = Execution (Execução)
+* - = Sem Permissão
+
+# PESQUISA COMPLETA DE PERMISSÕES
+
+```
+  ls -lh
+```
+
+Permissões|Links|Proprietários|Grupo|Tamanho|Data e Hora|Nome
+---|---|---|---|---|---|---
+drwxr-xr-x|2|marcus|marcus|4096|13/9/2017|mlssysem
+
 ---
-# Comando para criar arquivo vazio - touch
+# COMANDO PARA CRIAR ARQUIVO VAZIO - touch
 
 * Criando arquivoteste
 ```
@@ -222,7 +303,12 @@ rw-|r--|x--
 -rwx-w-r-- (arquivo, Proprietário lê, escreve, executa; Grupo escreve; Outros lê)
 ```
 
-# Alterando permissões para o Proprietário fazer tudo, Grupo só ler, Outros escrever.
+# ALETRANDO PERMISSÕES 
+
+1 .Proprietário, fazer tudo 
+2. Grupo, só ler 
+3. Outros, escrever
+
 ```
 touch - c
 sudo chmod 724 arquivoteste
@@ -230,7 +316,7 @@ sudo ls -l arquivoteste
 -rwxr---w-		
 ```
 
-# Permissão geral para todos
+# PERMISSÃO GERAL PARA TODOS
 ```
 sudo chmod 777 arquivoteste
 sudo ls -l arquivoteste
