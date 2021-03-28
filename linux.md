@@ -147,25 +147,31 @@ Fonte: Meus arquivos
 2. Escrita - 2 
 3. Leitura - 4
 
-1 = ligado / 0 = desligado
+## 1 = ligado / 0 = desligado
 
-rwx
-001	= 1
+rwx|
+---|
+001	= 1|
 
---x
-001 = 1
+--x|
+---|
+001 = 1|
 
--w-
-010 = 2
+-w-|
+---|
+010 = 2|
 
-r--
-100 = 4
+r--|
+---|
+100 = 4|
 
-rw-
-110 = 4 + 2 = 6
+rw-|
+---|
+110 = 4 + 2 = 6|
 
-rwx
-111 = 4 + 2 + 1 = 7
+rwx|
+---|
+111 = 4 + 2 + 1 = 7|
 
 # Proprietário	Grupo	Outros
 
