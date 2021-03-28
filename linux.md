@@ -9,8 +9,9 @@
 ```
   usermod -aG sudo nome-usuario
 ```
-fonte: [Digital Ocean](https://www.digitalocean.com/community/cdtutorials/initial-server-setup-with-debian-9
-)
+
+Fonte: [Digital Ocean](https://www.digitalocean.com/community/cdtutorials/initial-server-setup-with-debian-9)
+
 ---
 # Aula 2
 * (clear) -> Limpa a tela
@@ -82,6 +83,7 @@ fonte: [Digital Ocean](https://www.digitalocean.com/community/cdtutorials/initia
 * (history) - exibe os mil últimos comando digitados
 
 Fonte: [Professor José de Assis](https://youtu.be/agpNQ0Tv7ZU)
+
 ---
 
 # Comando kill
@@ -102,7 +104,9 @@ Fonte: [Professor José de Assis](https://youtu.be/agpNQ0Tv7ZU)
 ```
   kill <numero_PID>
 ```
+
 Fonte: Meus arquivos
+
 ---
 
 # Definir editor padrão
