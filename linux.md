@@ -1,21 +1,18 @@
 # Adicionar novo usuário
-fonte: [Digital Ocean](https://www.digitalocean.com/community/cdtutorials/initial-server-setup-with-debian-9
-)
 
 * Após criar o novo usuário ja aparecerá a opção para criação da senha
 ``` 
-adduser nome-usuario
+  adduser nome-usuario
 ```
 
 ## Adicionar o usuário ao grupo sudo
 ```
-usermod -aG sudo nome-usuario
+  usermod -aG sudo nome-usuario
 ```
-
+fonte: [Digital Ocean](https://www.digitalocean.com/community/cdtutorials/initial-server-setup-with-debian-9
+)
 ---
 # Aula 2
-Fonte: [Professor José de Assis](https://youtu.be/agpNQ0Tv7ZU)
-
 * (clear) -> Limpa a tela
 * (~) <- símbolo Diretório padrão do root
 * (#) <- símbolo Logado como root usuario adim
@@ -84,26 +81,148 @@ Fonte: [Professor José de Assis](https://youtu.be/agpNQ0Tv7ZU)
 * (cd ho+tab) - colpleta o comando
 * (history) - exibe os mil últimos comando digitados
 
-
+Fonte: [Professor José de Assis](https://youtu.be/agpNQ0Tv7ZU)
 ---
 
 # Comando kill
-Fonte: Meus arquivos
-
 * Comando para parar um processo 
    * Verifica os programas que estão sendo executados
 ```
-top 
+  top 
 ```
 *  Mostra os programas em execução
-```
-ps aux 
+``` 
+  ps aux 
 ```
 * Especificando 
 ``` 
-ps -ef | grep <nome>
+  ps -ef | grep <nome>
 ```
 * Interrompendo o programa
 ```
-kill <numero_PID>
+  kill <numero_PID>
+```
+Fonte: Meus arquivos
+---
+
+# Definir editor padrão
+```
+  sudo update-alternatives --config editor
+```
+# Alterar o grupo de um arquivo ou diretório - chgrp (change group)
+
+**sintexe:**
+```
+  chgrp [novo_grupo] [nome_arquivo]
+```
+
+# Alterar o proprietário de um arquivo ou diretório - chown (change owner)
+
+**sintaxe:**
+```
+  chown [novo_proprietário] [novo_arquivo]
+```
+# Adiciona um novo grupo - addgroup
+
+**sintaxe:** 
+```
+  addgroup [nome_grupo]
+```
+
+---
+# Comando chmod- Altera permissões pelo terminal
+```
+  chmod +x <arquivo/diretorio>
+```
+
+# Comando chmod - altera as permissões de acesso a arquivos e diretórios.
+
+**Modo de permissões octal**
+
+* Sintaxe:
+```
+  chmod [permissões] [arquivos ou diretórios]
+```
+1. Execução - 1 
+2. Escrita - 2 
+3. Leitura - 4
+
+1 = ligado / 0 = desligado
+
+rwx
+001	= 1
+
+--x
+001 = 1
+
+-w-
+010 = 2
+
+r--
+100 = 4
+
+rw-
+110 = 4 + 2 = 6
+
+rwx
+111 = 4 + 2 + 1 = 7
+
+# Proprietário	Grupo	Outros
+
+rwx|rw-|rw-
+---|---|--- 
+111|110|110
+7|6|6
+
+# 766
+1. Proprietário > lê,escreve,executa; 
+2. Grupo > lê, escreve; 
+3. Outros > lê, escreve  
+
+
+rw-|r--|x--
+---|---|---
+6|4|0
+
+# 6	4	0
+1. Proprietário > lê, escreve; 
+2. Grupo > lê; 
+3. Outros > lê
+
+---
+# Comando para criar arquivo vazio - touch
+
+* Criando arquivoteste
+```
+  sudo touch arquivoteste
+```
+
+* Mostra o arquivo criado 
+```
+  ls arquivoteste
+```
+
+* Mostra detalhes do arquivo criado
+```
+  ls -l arquivoteste
+```
+
+**Explicando**
+```
+-rwx-w-r-- (arquivo, Proprietário lê, escreve, executa; Grupo escreve; Outros lê)
+```
+
+# Alterando permissões para o Proprietário fazer tudo, Grupo só ler, Outros escrever.
+```
+touch - c
+sudo chmod 724 arquivoteste
+sudo ls -l arquivoteste
+-rwxr---w-		
+```
+
+# Permissão geral para todos
+```
+sudo chmod 777 arquivoteste
+sudo ls -l arquivoteste
+-rwxrwxrwx
 ```
