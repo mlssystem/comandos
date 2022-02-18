@@ -7,7 +7,7 @@ font: arquivos pessoais de diversas consultas na internet, nem sempre salvo o li
 
 * CRIANDO USUARIO
 ```
-MariaDB [(none)]> CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha'
+MariaDB [(none)]> CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha';
 ```
 * DELETANDO USUÁRIOS
 ```
@@ -41,7 +41,7 @@ GRANT ALL PRIVILEGES ON * . * TO 'novousuario'@'localhost';
 
 * ATUALIZANDO PERMISSÃO
 ```	
-FLUSH PRIVILEGIOS	
+FLUSH PRIVILEGES;
 ```
 
 *  VERIFICANDO PRIVILEGIOS PARA USUARIOS

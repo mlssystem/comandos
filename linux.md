@@ -13,6 +13,7 @@
 Fonte: [Digital Ocean](https://www.digitalocean.com/community/cdtutorials/initial-server-setup-with-debian-9)
 
 ---
+
 # CONTEÚDO AULA-2
 * (clear) -> Limpa a tela
 * (~) <- Símbolo Diretório padrão do root
@@ -82,12 +83,12 @@ Fonte: [Digital Ocean](https://www.digitalocean.com/community/cdtutorials/initia
 * (cd ho+tab) - Completa o comando
 * (history) - Exibe os mil últimos comando digitados
 
-## comando para listar upgrade
+## LISTAR UPGRADE
 ```
 apt list --upgradeable
 ```
 
-## LOCALIZAR PROGRAMAS
+# LOCALIZAR PROGRAMAS
 ```
   dpkg -l | grep apache2 
   dpkg -l | grep openjdk-8-jre
@@ -97,42 +98,46 @@ Fonte: [Professor José de Assis](https://youtu.be/agpNQ0Tv7ZU)
 
 ---
 
-## COMPACTAR ARQUIVOS
+# COMPACTAR ARQUIVOS
 ```	
   tar -czvf arquivo.tar.gz arquivo/
     ou
   tar cf arquivo.tar arquivo  
 ```
 
-## DESCOMPACTAR ARQUIVOS
+# DESCOMPACTAR ARQUIVOS
 ```  
   tar -xzvf arquivo.tar.gz
     ou
   tar xf arquivo.tar arquivo  
 ```
+
 ---  
 
 # COMANDO KILL
 * Comando para parar um processo 
-   * Verifica os programas que estão sendo executados
-```
-  top 
-```
 
-*  Mostra os programas em execução
-``` 
-  ps aux 
-```
-* Especificando 
-``` 
-  ps -ef | grep <nome>
-```
-* Interrompendo o programa
+## INTERROMPENDO O PROGRAMA
 ```
   kill <numero_PID>
 ```
 
-Fonte: Meus arquivos
+## VERRIFICAR PROGRAMAS QUE ESTÃO SENDO EXECUTADOS
+```
+  top 
+```
+
+## MOSTRAR PROGRAMAS EM EXECUÇÃO
+``` 
+  ps aux 
+```
+
+## ESPECIFICANDO 
+``` 
+  ps -ef | grep <nome>
+```
+
+**Fonte: Meus arquivos**
 
 ---
 
@@ -141,7 +146,7 @@ Fonte: Meus arquivos
   cat /etc/*-release
 ```
 
-OU ENTÃO:
+**OU ENTÃO**:
 
 ```
   cat /etc/*-release | grep PRETTY
@@ -161,7 +166,7 @@ OU ENTÃO:
 ```
 --- 
 
-# DEDINIR EDITOR PADRÃO
+# DEFINIR EDITOR PADRÃO
 ```
   sudo update-alternatives --config editor
 ```
@@ -191,13 +196,15 @@ OU ENTÃO:
   addgroup [nome_grupo]
 ```
 
----
-# COMANDO chmod - ALTERA PERMISSÃO PELO TERMINAL
+
+# COMANDO CHMOD
+
+## COMANDO chmod - ALTERA PERMISSÃO PELO TERMINAL
 ```
   chmod +x <arquivo/diretorio>
 ```
 
-# COMANDO chmod - ALTERA AS PERMISSÕES DE ACESSO A ARQUIVOS E DIRETÓRIOS
+## COMANDO chmod - ALTERA AS PERMISSÕES DE ACESSO A ARQUIVOS E DIRETÓRIOS
 
 **Modo de permissões octal**
 
@@ -235,14 +242,14 @@ rwx|
 ---|
 111 = 4 + 2 + 1 = 7|
 
-# PROPRIETÁRIO | GRUPO | OUTROS
+## PROPRIETÁRIO | GRUPO | OUTROS
 
 rwx|rw-|rw-
 ---|---|--- 
 111|110|110
 7|6|6
 
-# 766
+## 766
 1. Proprietário > lê,escreve,executa; 
 2. Grupo > lê, escreve; 
 3. Outros > lê, escreve  
@@ -252,18 +259,18 @@ rw-|r--|x--
 ---|---|---
 6|4|0
 
-# 6	4	0
+## 6	4	0
 1. Proprietário > lê, escreve; 
 2. Grupo > lê; 
 3. Outros > lê
 
-### PERMISSÕES ###
+### PERMISSÕES
 
 Proprietario|Grupo|Outros
 ---|---|---
 rwx|r-x|r-x
 
-### SIGNIFICADOS ###
+### SIGNIFICADOS
 
 * r = Read (Leitura)
 * w = Write (Escrita)
@@ -283,22 +290,22 @@ drwxr-xr-x|2|marcus|marcus|4096|13/9/2017|mlssysem
 ---
 # COMANDO PARA CRIAR ARQUIVO VAZIO - touch
 
-* Criando arquivoteste
+## CRIANDO ARQUIVO TESTE
 ```
   sudo touch arquivoteste
 ```
 
-* Mostra o arquivo criado 
+## MOSTRAR ARQUIVO CRIADO 
 ```
   ls arquivoteste
 ```
 
-* Mostra detalhes do arquivo criado
+## MOSTRAR DETALHES DO ARQUIVO CRIADO
 ```
   ls -l arquivoteste
 ```
 
-**Explicando**
+### Explicando
 ```
 -rwx-w-r-- (arquivo, Proprietário lê, escreve, executa; Grupo escreve; Outros lê)
 ```
@@ -322,3 +329,51 @@ sudo chmod 777 arquivoteste
 sudo ls -l arquivoteste
 -rwxrwxrwx
 ```
+
+# LAMP
+Normalmente, o diretório /var/www, mas também pode ser /var/www/html por exemplo. Por padrão, este diretório só pode ser escrito pelo root e para ficar mais prático, e poder acessar com o nosso usuário. 
+
+## MUDANDO O DIRETÓRIO 
+```
+$ sudo chown -c -R seu_usuario /var/www/ 
+```
+# rEINICIANDO O APACHE 
+```
+$ sudo /etc/init.d/apache2 restart 
+```
+
+# COMANDO CHOWN
+## chown dono[:grupo] arquivo
+
+### Descrição
+Este comando permite alterar o nome do dono e/ou do grupo de arquivos.
+
+### Algumas opções do comando
+```
+-c : informa quais arquivos estão sendo alterados.
+-h : altera o link, não o arquivo apontado pelo link.
+-v : informa quais arquivos estão sendo processados (não necessariamente alterados).
+-R : altera, recursivamente, dono e/ou grupo de arquivos.
+−−help : exibe opções do comando.
+−−version : exibe informações sobre o aplicativo.
+```
+
+### Exemplos
+Suponha, por exemplo, a existência de um diretório de nome teste. Queremos que este diretório e todo o seu conteúdo passe a pertencer ao usuário aluno e ao grupo informatica. Podemos, então, digitar o comando
+```
+chown -Rc aluno:informatica teste
+```
+para alterar o dono e o grupo do diretório teste e de todos os arquivos e diretórios que estão hierarquicamente abaixo do diretório teste. Como o argumento -c é usado, será mostrada apenas a lista dos arquivos e diretórios alterados.
+
+### Para alterar apenas o dono dos arquivos, digite
+```
+chown -Rc aluno teste
+```
+Se o objetivo é alterar apenas o grupo dos arquivos, basta digitar
+```
+chown -Rc :informatica teste
+```
+
+**Observações**
+* O comando chgrp altera o grupo de arquivos.
+* O comando chmod altera as permissões de arquivos.
