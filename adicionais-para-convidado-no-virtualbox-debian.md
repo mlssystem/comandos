@@ -1,41 +1,50 @@
-# Como instalar os Adicionais para Convidados do VirtualBox no Debian?
+# COMO INSTALAR OS ADICIONAIS PARA CONVIDADOS DO VIRTUALBOX NO DEBIAN?
 
-### Antes de clicar em adicionais para convidados no Virtual Box (que na maioria das vezes não executa sem acusar erro). Faço o seguinte!
 
-* Primeiro passo
-
+## PRIMEIRO PASSO
+Necessário em alguns casos
 ```
+
 sudo apt-get install build-essential linux-headers-`uname -r`
-```
-
-* Segundo passo
 
 ```
+
+
+## SEGUNDO PASSO
+```
+
 sudo apt install build-essential module-assistant
-```
-
-* Terceiro passo
 
 ```
+
+
+## TERCEIRO PASSO
+```
+
 sudo m-a prepare
-```
-
-* Quarto passo
-
-   * clicar na opção inserir imagem para convidados (no virtual box).
-
-* Quinto passo
 
 ```
+
+## QUARTO PASSO
+Clicar na opção inserir imagem para convidados (no virtual box).
+
+
+## QUINTO PASSO
+```
+
 sudo sh /media/cdrom/VBoxLinuxAdditions.run
+
 ``` 
 
-* Sexto passo
-
+## SEXTO PASSO
 ```
+
 reboot
+
 ```
 
-Breve Jesus voltará para buscar todos aqueles que o esperam. Estou me praparando para esse dia glorioso, E você?
+> Breve Jesus voltará para buscar todos aqueles que o esperam. Estou me praparando para esse dia glorioso, E você?
+> Quem crer e for batizado será salvo; mas quem não crer será condenado.
+> Fiquem com Deus.
+> Paz!!!
 
-Fiquem com Deus!
