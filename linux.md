@@ -2,7 +2,7 @@
 Após criar o novo usuário ja aparecerá a opção para criação da senha
 ``` 
 
-  adduser nome-usuario
+adduser nome-usuario
 
 ```
 
@@ -10,7 +10,7 @@ Após criar o novo usuário ja aparecerá a opção para criação da senha
 ## ADICIONAR USUÁRIO AO GRUPO SUDO
 ```
 
-  $ echo "usuario ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/usuario
+$ echo "usuario ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/usuario
 
 ```
 
@@ -50,7 +50,7 @@ Demais distros
 (cd + enter) - Leva ao diretório padrão d usuário + 
 (clear) - Limpa tela
 (ls) - Lista os principais diretórios do linux
-(cd home + enter) -  Vai para a pasta do home
+(cd home + enter) -Vai para a pasta do home
 (cd ..) - Volta um diretório
 (date) - Exibe data e hora
 (cal) - Calendario
@@ -128,8 +128,8 @@ apt list --upgradeable
 # LOCALIZAR PROGRAMAS
 ```
 
-  dpkg -l | grep apache2 
-  dpkg -l | grep openjdk-8-jre
+dpkg -l | grep apache2 
+dpkg -l | grep openjdk-8-jre
 
 ```
 Fonte: [Professor José de Assis](https://youtu.be/agpNQ0Tv7ZU)
@@ -140,19 +140,19 @@ Fonte: [Professor José de Assis](https://youtu.be/agpNQ0Tv7ZU)
 # COMPACTAR ARQUIVOS
 ```	
 
-  tar -czvf arquivo.tar.gz arquivo/
-    ou
-  tar cf arquivo.tar arquivo  
+tar -czvf arquivo.tar.gz arquivo/
+ou
+tar cf arquivo.tar arquivo
 
 ```
 
 
 # DESCOMPACTAR ARQUIVOS
-```  
+```
 
-  tar -xzvf arquivo.tar.gz
-    ou
-  tar xf arquivo.tar arquivo  
+tar -xzvf arquivo.tar.gz
+ou
+tar xf arquivo.tar arquivo
 
 ```
 
@@ -164,7 +164,7 @@ Comando para parar um processo
 ## INTERROMPENDO O PROGRAMA
 ```
 
-  kill <numero_PID>
+kill <numero_PID>
 
 ```
 
@@ -172,7 +172,7 @@ Comando para parar um processo
 ## VERRIFICAR PROGRAMAS QUE ESTÃO SENDO EXECUTADOS
 ```
 
-  top 
+top 
 
 ```
 
@@ -180,7 +180,7 @@ Comando para parar um processo
 ## MOSTRAR PROGRAMAS EM EXECUÇÃO
 ``` 
 
-  ps aux 
+ps aux 
 
 ```
 
@@ -188,7 +188,7 @@ Comando para parar um processo
 ## ESPECIFICANDO 
 ``` 
 
-  ps -ef | grep <nome>
+ps -ef | grep <nome>
 
 ```
 **Fonte: Meus arquivos**
@@ -198,19 +198,19 @@ Comando para parar um processo
 # COMANDO PARA VERIFICAR A VERSÃO DO SISTEMA:
 ```
 
-  cat /etc/*-release
+cat /etc/*-release
 
 ```
 **OU ENTÃO**:
 ```
-  
-  cat /etc/*-release | grep PRETTY
-  lsb_release -a
-  uname -r (verifica versão do Kernel)
-  uname -a
-  uname -mrs
-  uname --help
-  cat /proc/version
+
+cat /etc/*-release | grep PRETTY
+lsb_release -a
+uname -r (verifica versão do Kernel)
+uname -a
+uname -mrs
+uname --help
+cat /proc/version
 
 ```
 
@@ -218,8 +218,8 @@ Comando para parar um processo
 # COMANDO PARA VERIFICAR INTEGRIDADE
 ```
 
-  $ls <nomoe_programa>
-  #Sha256sum <nome_programa> | grep <numero_sha256sum>
+$ls <nomoe_programa>
+#Sha256sum <nome_programa> | grep <numero_sha256sum>
 
 ```
 
@@ -227,7 +227,7 @@ Comando para parar um processo
 # DEFINIR EDITOR PADRÃO
 ```
 
-  sudo update-alternatives --config editor
+sudo update-alternatives --config editor
 
 ```
 
@@ -243,7 +243,7 @@ Comando para parar um processo
 **sintexe:**
 ```
 
-  chgrp [novo_grupo] [nome_arquivo]
+chgrp [novo_grupo] [nome_arquivo]
 
 ```
 
@@ -252,7 +252,7 @@ Comando para parar um processo
 **sintaxe:**
 ```
 
-  chown [novo_proprietário] [novo_arquivo]
+chown [novo_proprietário] [novo_arquivo]
 
 ```
 
@@ -261,7 +261,7 @@ Comando para parar um processo
 **sintaxe:**
 ```
 
-  addgroup [nome_grupo]
+addgroup [nome_grupo]
 
 ```
 
@@ -272,7 +272,7 @@ Comando para parar um processo
 ## COMANDO chmod - ALTERA PERMISSÃO PELO TERMINAL
 ```
 
-  chmod +x <arquivo/diretorio>
+chmod +x <arquivo/diretorio>
 
 ```
 
@@ -282,7 +282,7 @@ Comando para parar um processo
 Sintaxe:
 ```
 
-  chmod [permissões] [arquivos ou diretórios]
+chmod [permissões] [arquivos ou diretórios]
 
 ```
 > 1. Execução - 1 
@@ -328,7 +328,7 @@ rwx|rw-|rw-
 ## 766
 > 1. Proprietário > lê,escreve,executa; 
 > 2. Grupo > lê, escreve; 
-> 3. Outros > lê, escreve  
+> 3. Outros > lê, escreve
 
 rw-|r--|x--
 ---|---|---
@@ -359,7 +359,7 @@ x = Execution (Execução)
 # PESQUISA COMPLETA DE PERMISSÕES
 ```
 
-  ls -lh
+ls -lh
 
 ```
 
@@ -375,7 +375,7 @@ drwxr-xr-x|2|marcus|marcus|4096|13/9/2017|mlssysem
 ## CRIANDO ARQUIVO TESTE
 ```
 
-  sudo touch arquivoteste
+sudo touch arquivoteste
 
 ```
 
@@ -383,14 +383,14 @@ drwxr-xr-x|2|marcus|marcus|4096|13/9/2017|mlssysem
 ## MOSTRAR ARQUIVO CRIADO 
 ```
 
-  ls arquivoteste
+ls arquivoteste
 
 ```
 
 ## MOSTRAR DETALHES DO ARQUIVO CRIADO
 ```
 
-  ls -l arquivoteste
+ls -l arquivoteste
 
 ```
 
