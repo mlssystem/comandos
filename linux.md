@@ -235,7 +235,7 @@ sudo update-alternatives --config editor
 # CONFIGURAR TECLADO
 ```
 
-	dpkg-reconfigure keyboard-configuration
+dpkg-reconfigure keyboard-configuration
 
 ```
 

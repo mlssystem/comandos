@@ -335,4 +335,78 @@ $ ssh ip
 
 ```
 
+
+# SAMBA "SOFTWARE SERVIDOR"
+
+
+## INSTALAR O SAMBA
+```
+
+# apt-get install samba -y
+
+```
+
+
+## CONFIGURAR DO SAMBA
+Logar com privilégios root
+Recomendado fazer o backup do arquivo a ser alterado
+```
+
+nano /etc/samba/smb.conf
+
+```
+
+
+## CRIAR O DIRETÓRIO A SER COMPARTILHADO
+E conceder todos privilégios para todos
+```
+
+mkdir /home/nome_diretorio && chmod 777 /nome_diretorio
+
+```
+
+## NO FINAL DO ARQUIVO SMB.CONF, ADICIONE A CONFIGURAÇÃO 
+```
+Nome do diretório criado para ser compartilhado entre Windows e Debian e vice-versa
+[nome_diretorio]
+
+local arquivos
+path = /home/nome_diretorio
+
+Todos podem acessar o conteúdo compartilhado
+public = yes
+
+Deixando visivel na rede
+browseable = yes
+
+Permitindo escrita
+writeable = yes
+
+Impedindo apenas leitura
+read only = no
+
+Máscara que os arquivos serão criados
+create mask = 0700
+
+Máscara que os diretórios serão criados
+directory mask = 0700
+```
+
+
+## REINICIAR O SAMBA
+```
+
+/etc/init.d/smbd restart
+ou
+systemctl restart smbd
+systemctl restart nmbd
+
+```
+
+> Na barra de endereço do Explorador de arquivos do Windows é só digita o IP donde instalou o **SAMBA** 
+> Depois de duas barras invertidas '\\'
+
+Exemplo:
+\\numero_do_ip
+
 Paz!!!
