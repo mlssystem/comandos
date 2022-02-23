@@ -269,6 +269,14 @@ addgroup [nome_grupo]
 # COMANDO CHMOD
 
 
+## PERMISSÃO PARA EXECUTAR SCRIPT .SH
+```
+
+chmod +x <nome_arquivo>
+
+```
+
+
 ## COMANDO chmod - ALTERA PERMISSÃO PELO TERMINAL
 ```
 
