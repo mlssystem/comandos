@@ -1,7 +1,9 @@
 # PRIMEIROS PASSOS PÓS INSTALAÇÃO SERVIDOR DEBIAN-11-BULLSEYE
 Versão debian-11.2.0-amd64-netinst.iso [baixar iso do site debian.org](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.2.0-amd64-netinst.iso)
 
-> Fiz a instalação apenas com ultilitários do sistema e SSH
+> Crie o hábito de antes de clicar em qualquer link; primeiro copie o link e veja par onde irá direcionar. Uma boa prática também e colar o cammpo url do site : [VRUSTOTAL](https://www.virustotal.com/gui/home/url) para saber se o link não está infectado. Caso seja suspeito!
+
+> OBS: Fiz a instalação apenas com ultilitários do sistema e SSH
 
 
 
@@ -858,7 +860,7 @@ Você configurou seu servidor Apache para usar criptografia forte para conexões
 
 ---
 
-# COMO INSTALAR O WORDPRESS COM LAMP NO DEBIAN 10
+# COMO INSTALAR O WORDPRESS COM LAMP NO DEBIAN 10/11
 https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-debian-10-pt
 WordPressLAMP Stack Debian 10 - By Published on April 13, 2020
 
@@ -1029,9 +1031,12 @@ sudo apt install curl
 ```
 
 Mude para um diretório gravável e faça o download da versão compactada digitando:
+```
 
 cd /tmp
 curl -O https://wordpress.org/latest.tar.gz
+
+```
 Extraia o arquivo compactado para criar a estrutura de diretórios do WordPress:
 ```
 tar xzvf latest.tar.gz
