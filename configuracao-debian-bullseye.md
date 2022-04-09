@@ -1,11 +1,9 @@
 # PRIMEIROS PASSOS PÓS INSTALAÇÃO SERVIDOR DEBIAN-11-BULLSEYE
-Versão debian-11.2.0-amd64-netinst.iso [baixar iso do site debian.org](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.2.0-amd64-netinst.iso)
+Versão debian-11.2.0-amd64-netinst.iso [baixar isso do site debian.org](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.2.0-amd64-netinst.iso)
 
-> Crie o hábito de antes de clicar em qualquer link; primeiro copie o link e veja par onde irá direcionar. Uma boa prática também e colar o cammpo url do site : [VRUSTOTAL](https://www.virustotal.com/gui/home/url) para saber se o link não está infectado. Caso seja suspeito!
+> Crie o hábito de antes de clicar em qualquer link; primeiro copie o link e veja par onde irá direcionar. Uma boa prática também e colar o campo url do site : [VIRUSTOTAL](https://www.virustotal.com/gui/home/url) para saber se o link não está infectado. Caso seja suspeito!
 
-> OBS: Fiz a instalação apenas com ultilitários do sistema e SSH
-
-
+> OBS: Fiz a instalação apenas com utilitários do sistema e SSH
 
 ## ATUALIZAR DEBIAN 
 Logar como administrador root do sistema
@@ -23,7 +21,6 @@ apt install sudo
 
 ```
 
-
 ## INCLUIR USUÁRIO AO GRUPO SUDO
 
 ### Acessar arquivo sudoers
@@ -33,10 +30,9 @@ nano /etc/sudoers
 
 ```
 
-
-### Incuindo usuário
+### Incluindo usuário
 Abaixo da linha de comando "root ALL=(ALL:ALL) ALL"
-Acrascetar o comando abaixo
+Acrascentar o comando abaixo
 ```
 
 marcus ALL=(ALL:ALL) ALL
@@ -52,13 +48,28 @@ sudo apt install rcconf
 ```
 
 
+# INSTALAR CURL
+```
+
+sudo apt install curl
+
+```
+
+
+# INSTALAR GCC
+```
+
+sudo apt install gcc
+
+```
+
+
 # INSTALAR APACHE2
 ```
 
 apt install apache2 -y
 
 ```
-
 
 ## VERIFICANDO STATUS
 ```
@@ -67,7 +78,6 @@ systemctl status apache
 
 ```
 
-
 ## VERIFICAR O NÚMERO DO IP
 ```
 
@@ -75,7 +85,6 @@ ip a
 
 ```
 Com o navegador aberto cole o número do **ip** e se tiver tudo **ok** aparecerá uma página com informações do Apache2
-
 
 ## ATUALIZAR DEBIAN
 ```
@@ -99,7 +108,6 @@ apt install mariadb-server -y
 apt install mariadb-client -y
 
 ```
-
 
 ## ATUALIZAR DEBIAN
 ```
@@ -125,7 +133,6 @@ create user 'novo_usuario'@'localhost' identified by 'senha';
 
 ```
 
-
 ## CONCEDENDO PRIVILEGIOS AO NOVO_USUARIO 
 O comando abaixo * . * dará permissão ao 'novo_usuario' para criar, e modificar; todos bancos de dados, e tabelas do localhost. 
 ```
@@ -133,7 +140,6 @@ O comando abaixo * . * dará permissão ao 'novo_usuario' para criar, e modifica
 grant all privileges on * . * to 'novo_usuario'@'localhost';
 
 ```
-
 
 ## ATUALIZANDO PRIVILÉGIOS
 ```
@@ -150,7 +156,6 @@ create database cadastro_produtos;
 
 ```
 
-
 ## SELECIONANDO BANCO 'cadastro_produtos'
 Precisa selecionar o banco de dados desejado para poder criar tabelas para o mesmo
 ```
@@ -166,7 +171,6 @@ use cadastro_produtos;
 create table produtos (id int not null auto_increment, codigo int, descricao varchar(50), preco double, categoria varchar(20), primary key (id) );
 
 ```
-
 
 ## ATUALIZAR DEBIAN
 ```
@@ -201,7 +205,6 @@ phpinfo();
 
 Com o navegador aberto cole o número do **ip/info.php** e se tiver tudo **ok** aparecerá uma página com informações do **PHP**
 
-
 ## ATUALIZAR DEBIAN
 ```
 
@@ -218,16 +221,13 @@ sudo apt install phpmyadmin -Y
 ```
 Quando abrir janela de configuração; selecione **apache** e **ok**
 
-Caso tenha configuando o mysql como descrito acima (criando banco de dados, usuário, e tabela), selecionar <não> na janela  dbconfig-common. Se não configurou selecione opção <sim>, e crie uma senha para usar quando acessar no navegador seu **ip/phmyadmin**. Obs: Login será phpmyadmin e a senha a que você criou.
+Caso tenha configurando o mysql como descrito acima (criando banco de dados, usuário, e tabela), selecionar <não> na janela  dbconfig-common. Se não configurou selecione opção <sim>, e crie uma senha para usar quando acessar no navegador seu **ip/phmyadmin**. Obs: Login será phpmyadmin e a senha a que você criou.
 
-Se você selecionou a opção <não> é só acessar **ip/phpmyadmin** com seu login e senha e terá total acesso para criar, aletar, e usar com todos os privilégios.
-
+Se você selecionou a opção <não> é só acessar **ip/phpmyadmin** com seu login e senha e terá total acesso para criar, deletar, e usar com todos os privilégios.
 
 ---
 
-
 # CONFIGURANDO SSH
-
 
 ## ATUALIZAR O DEBIAN
 ```
@@ -235,7 +235,6 @@ Se você selecionou a opção <não> é só acessar **ip/phpmyadmin** com seu lo
 $ sudo apt update
 
 ```
-
 
 ## VERIFICAR O STATUS DO SSH
 ```
@@ -267,7 +266,6 @@ sudo dpkg-reconfigure openssh-server
 
 ```
 
-
 ## REICICIANDO SERVIÇOS DO APACHE2
 ```
 
@@ -279,14 +277,12 @@ $ sudo systemctl restart apache2.service
 
 # COPIANDO CHAVES SSH DA ESTAÇÃO DE TRABALHO PARA O DEBIAN 11
 
-
 ## GERANDO CHAVE SSH
 ```
 
 $ ssh-keygen
 
 ```
-
 
 ## TESTANDO CONEXÃO
 ```
@@ -295,7 +291,6 @@ $ ping -c 2 ip
 
 ```
 
-
 ## COPIANDO CHAVA PARA SEU LOCAL DE TRABALHO
 ```
 
@@ -303,14 +298,12 @@ $ ssh-copy-id usuario@ip
 
 ```
 
-
 ## VERIFICANDO
 ```
 
 $ ssh usuario@ip
 
 ```
-
 
 ## NEGANDO ACESSO COM SENHA AO ROOT PERMITINDO LOGAR SÓ COM A CHAVE PRIVADA
 ```
@@ -320,14 +313,12 @@ PermitRootLogin prohibit-password
 
 ```
 
-
 ## PRECISA ATRIBUIR A CHAVE AO ROOT (!IMPORTANT)
 ```
 
 ssh-copy-id root@ip
 
 ```
-
 
 ## REINICIANDO SSH
 ```
@@ -336,7 +327,6 @@ sudo systemctl restart ssh
 
 ```
 
-
 ## TESTANDO 
 ```
 
@@ -344,12 +334,9 @@ $ ssh ip
 
 ```
 
-
 ---
 
-
 # SAMBA "SOFTWARE SERVIDOR"
-
 
 ## INSTALAR O SAMBA
 ```
@@ -357,7 +344,6 @@ $ ssh ip
 # apt-get install samba -y
 
 ```
-
 
 ## CONFIGURAR DO SAMBA
 Logar com privilégios root
@@ -367,7 +353,6 @@ Recomendado fazer o backup do arquivo a ser alterado
 nano /etc/samba/smb.conf
 
 ```
-
 
 ## CRIAR O DIRETÓRIO A SER COMPARTILHADO
 E conceder todos privilégios para todos
@@ -404,7 +389,6 @@ Máscara que os diretórios serão criados
 directory mask = 0700
 ```
 
-
 ## REINICIAR O SAMBA
 ```
 
@@ -416,10 +400,10 @@ systemctl restart nmbd
 ```
 
 > Na barra de endereço do Explorador de arquivos do Windows é só digita o IP donde instalou o **SAMBA** 
-> Depois de duas barras invertidas ' \\ '
+> Depois de duas barras invertidas '\\'
 
 Exemplo:
-\\ numero_do_ip
+'\\' numero_do_ip
 
 
 # INSTALANDO UFW - FIREWALL
@@ -437,31 +421,28 @@ sudo ufw enable
 sudo ufw reload
 ```
 
-
 ---
 
-
 # PREPARANDO PARA INSTALAR WORDPRESS NO SERVIDOR DEBIAN-11
-
 
 ## PRÉ-REQUISITOS
 Para concluir este tutorial, você precisará ter acesso a um servidor Debian 10/11.
 
-Você precisará executar as seguintes tarefas antes de iniciar este guia:
+Você precisará executar as seguintes tarefas antes de iniciar esta guia:
 
 * Criar um usuário sudo em seu servidor: Concluiremos as etapas deste guia usando um usuário não-root com privilégios sudo. Você pode criar um usuário com privilégios sudo seguindo nosso guia Debian 10 initial server setup.
 * Instalar a pilha LAMP: O WordPress precisará de um servidor web, um banco de dados e o PHP para funcionar corretamente. A configuração de uma pilha LAMP (Linux, Apache, MariaDB e PHP) atende a todos esses requisitos. Siga este guia para instalar e configurar este software.
 * Proteger seu site com SSL: o Wordpress fornece conteúdo dinâmico e cuida da autenticação e autorização do usuário. O protocolo TLS/SSL é a tecnologia que lhe permite criptografar o tráfego do seu site para que sua conexão esteja segura. A maneira como você irá configurar o SSL dependerá se você tem um nome de domínio para seu site.
  * Se você tiver um nome de domínio… a maneira mais fácil de proteger seu site é com o Let’s Encrypt, que oferece certificados confiáveis e gratuitos. Siga nosso guia do Let’s Encrypt para o Apache para configurar isto.
- * Se você não tiver um domínio… e você está usando essa configuração apenas para teste ou uso pessoal, pode usar um certificado autoassinado. Isso fornece o mesmo tipo de criptografia, mas sem a validação do domínio. Siga nosso guia de SSL autoassinado para o Apache para configurar isto.
+ * Se você não tiver um domínio… e você está usando essa configuração apenas para teste ou uso pessoal, pode usar um certificado auto assinado. Isso fornece o mesmo tipo de criptografia, mas sem a validação do domínio. Siga nosso guia de SSL auto assinado para o Apache para configurar isto.
 
 
 # PASSO 1 — CRIANDO O CERTIFICADO SSL
-https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10
+[COMMUNITY digitalOcean](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-debian-10)
 
 O TLS/SSL funciona usando uma combinação de um certificado público e uma chave privada. A chave SSL é mantida em segredo no servidor. Ele é usado para criptografar o conteúdo enviado aos clientes. O certificado SSL é compartilhado publicamente com qualquer pessoa que solicite o conteúdo. Ele pode ser usado para descriptografar o conteúdo assinado pela chave SSL associada.
 
-Podemos criar uma chave autoassinada e um par de certificados com OpenSSL em um único comando:
+Podemos criar uma chave auto assinada e um par de certificados com OpenSSL em um único comando:
 ```
 
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
@@ -470,9 +451,9 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/privat
 
 1. **openssl** : Esta é a ferramenta básica de linha de comando para criar e gerenciar certificados OpenSSL, chaves e outros arquivos.
 
-2. **req** : Este subcomando especifica que queremos usar o gerenciamento de solicitação de assinatura de certificado (CSR) X.509. O “X.509” é um padrão de infraestrutura de chave pública ao qual SSL e TLS aderem para seu gerenciamento de chave e certificado. Queremos criar um novo certificado X.509, então estamos usando este subcomando.
+2. **req** : Este sub comando especifica que queremos usar o gerenciamento de solicitação de assinatura de certificado (CSR) X.509. O “X.509” é um padrão de infraestrutura de chave pública ao qual SSL e TLS aderem para seu gerenciamento de chave e certificado. Queremos criar um novo certificado X.509, então estamos usando este sub comando.
 
-3. **-x509** : Isso modifica ainda mais o subcomando anterior, informando ao utilitário que queremos fazer um certificado autoassinado em vez de gerar uma solicitação de assinatura de certificado, como normalmente aconteceria.
+3. **-x509** : Isso modifica ainda mais o sub comando anterior, informando ao utilitário que queremos fazer um certificado auto assinado em vez de gerar uma solicitação de assinatura de certificado, como normalmente aconteceria.
 
 4. **-nodes** : Isso diz ao OpenSSL para pular a opção de proteger nosso certificado com uma senha. Precisamos que o Apache seja capaz de ler o arquivo, sem intervenção do usuário, quando o servidor for inicializado. Uma senha impediria que isso acontecesse porque teríamos que inseri-la após cada reinicialização.
 
@@ -515,7 +496,6 @@ Faremos alguns ajustes em nossa configuração:
 3. (Recomendado) Modificaremos o arquivo de Host Virtual não criptografado para redirecionar automaticamente as solicitações para o Host Virtual criptografado.
 
 Quando terminarmos, devemos ter uma configuração SSL segura.
-
 
 ## CRIANDO UM SNIPPET DE CONFIGURAÇÃO DO APACHE COM CONFIGURAÇÕES DE CRIPTOGRAFIA FORTES
 Primeiro, criaremos um trecho de configuração do Apache para definir algumas configurações de SSL. Isso configurará o Apache com um conjunto de criptografia SSL forte e habilitará alguns recursos avançados que ajudarão a manter nosso servidor seguro. Os parâmetros que definiremos podem ser usados por qualquer Host Virtual habilitando SSL.
@@ -665,9 +645,7 @@ Salve e feche o arquivo quando terminar.
 
 Essas são todas as alterações de configuração que você precisa fazer no Apache. Em seguida, discutiremos como atualizar as regras de firewall ```ufw``` para permitir o tráfego HTTPS criptografado para o seu servidor.
 
-
 ---
-
 
 # PASSO 3 — AJUSTANDO O FIREWALL
 Se você tiver o ```ufw``` firewall ativado, conforme recomendado pelos guias de pré-requisitos, talvez seja necessário ajustar as configurações para permitir o tráfego SSL. Felizmente, quando instalado no Debian 10, ```ufw``` vem carregado com perfis de aplicativos que você pode usar para ajustar suas configurações de firewall
@@ -860,16 +838,15 @@ Você configurou seu servidor Apache para usar criptografia forte para conexões
 
 ---
 
-# COMO INSTALAR O WORDPRESS COM LAMP NO DEBIAN 10/11
-https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-debian-10-pt
-WordPressLAMP Stack Debian 10 - By Published on April 13, 2020
+# COMO INSTALAR O WORDPRESS COM LAMP NO DEBIAN 10 (Funcionou no Debian 11.2.0)
+[COMMUNITY digitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-debian-10-pt)
 
+WordPressLAMP Stack Debian 10 - By Published on April 13, 2020
 
 ## INTRODUÇÃO
 O WordPress é o CMS (sistema de gerenciamento de conteúdos) mais popular na Internet. Ele permite que você configure blogs e sites flexíveis com facilidade, em cima de um back-end em MariaDB com processamento em PHP. A adoção do WordPress teve um crescimento incrível, sendo uma ótima escolha para se colocar um website em funcionamento de maneira rápida. Após a configuração, quase toda a administração pode ser feita através do front-end web.
 
 Neste guia, focaremos em configurar uma instância do WordPress em uma pilha LAMP (Linux, Apache, MariaDB e PHP) em um servidor Debian 10.
-
 
 ## PRÉ-REQUISITOS
 Para concluir este tutorial, você precisará ter acesso a um servidor Debian 10.
@@ -880,7 +857,7 @@ Você precisará executar as seguintes tarefas antes de iniciar este guia:
 * Instalar a pilha LAMP: O WordPress precisará de um servidor web, um banco de dados e o PHP para funcionar corretamente. A configuração de uma pilha LAMP (Linux, Apache, MariaDB e PHP) atende a todos esses requisitos. Siga este guia para instalar e configurar este software.
 * Proteger seu site com SSL: o Wordpress fornece conteúdo dinâmico e cuida da autenticação e autorização do usuário. O protocolo TLS/SSL é a tecnologia que lhe permite criptografar o tráfego do seu site para que sua conexão esteja segura. A maneira como você irá configurar o SSL dependerá se você tem um nome de domínio para seu site.
  * Se você tiver um nome de domínio… a maneira mais fácil de proteger seu site é com o Let’s Encrypt, que oferece certificados confiáveis e gratuitos. Siga nosso guia do Let’s Encrypt para o Apache para configurar isto.
- * Se você não tiver um domínio… e você está usando essa configuração apenas para teste ou uso pessoal, pode usar um certificado autoassinado. Isso fornece o mesmo tipo de criptografia, mas sem a validação do domínio. Siga nosso guia de SSL autoassinado para o Apache para configurar isto.
+ * Se você não tiver um domínio… e você está usando essa configuração apenas para teste ou uso pessoal, pode usar um certificado auto assinado. Isso fornece o mesmo tipo de criptografia, mas sem a validação do domínio. Siga nosso guia de SSL auto assinado para o Apache para configurar isto.
 Quando você terminar os passos de configuração, efetue login no seu servidor como seu usuário sudo e continue abaixo.
 
 
@@ -988,7 +965,7 @@ Para permitir arquivos .htaccess, você precisará adicionar um bloco Directory 
 
 ```
 
-Quando terminar, salve e feche o arquivo.
+> Quando terminar, salve e feche o arquivo.
 
 Em seguida, ative o módulo rewrite para utilizar o recurso de link permanente ou permalink do WordPress:
 ```
@@ -1039,7 +1016,7 @@ curl -O https://wordpress.org/latest.tar.gz
 ```
 Extraia o arquivo compactado para criar a estrutura de diretórios do WordPress:
 ```
-tar xzvf latest.tar.gz
+tar -xzvf latest.tar.gz
 ```
 
 Vamos mover esses arquivos para o nosso document root momentaneamente. Antes, porém, adicionamos um arquivo vazio .htaccess para que este fique disponível para uso posterior do WordPress.
@@ -1078,7 +1055,7 @@ Com isso, você instalou o WordPress com sucesso em seu servidor web e executou 
 # PASSO 5 — CONFIGURANDO O DIRETÓRIO DO WORDPRESS
 Antes de iniciarmos o processo de configuração baseado em web do WordPress, precisamos ajustar alguns itens em nosso diretório do WordPress.
 
-Comece dando a propriedade de todos os arquivos ao usuário e grupo www-data. Este é o usuário com o qual o servidor web Apache é executado, e o Apache precisará ler e gravar arquivos do WordPress para servir o site e executar atualizações automáticas.
+Comece dando a propriedade de todos os arquivos ao usuário e grupo ```www-data```. Este é o usuário com o qual o servidor web Apache é executado, e o Apache precisará ler e gravar arquivos do WordPress para servir o site e executar atualizações automáticas.
 
 Atualize a propriedade com chown:
 
@@ -1173,7 +1150,7 @@ define('NONCE_SALT',       'VALUES COPIED FROM THE COMMAND LINE');
 
 Em seguida, modifique as configurações de conexão do banco de dados na parte superior do arquivo. Você precisa ajustar o nome do banco de dados, o usuário do banco de dados e a senha associada que você configurou no MariaDB.
 
-A outra alteração que você deve fazer é definir o método que o WordPress deve usar para gravar no sistema de arquivos. Como concedemos ao servidor web permissão para gravar onde ele precisar, podemos definir explicitamente o método do sistema de arquivos como “direct”. Se você não definir isso com nossas configurações atuais, o WordPress solicitará credenciais de FTP quando você executar determinadas ações.
+A outra alteração que você deve fazer é definir o método que o WordPress deve usar para gravar no sistema de arquivos. Como concedemos ao servidor web permissão para gravar onde ele precisar, podemos definir explicitamente o método do sistema de arquivos como “direct”. Se você não definir isso com nossas configurações atuais, o WordPress solicitará credenciais de FTP quando voc executar determinadas ações.
 
 Essa configuração pode ser adicionada abaixo das configurações de conexão com o banco de dados ou em qualquer outro local do arquivo:
 ```

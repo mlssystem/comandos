@@ -6,7 +6,6 @@ adduser nome-usuario
 
 ```
 
-
 ## ADICIONAR USUÁRIO AO GRUPO SUDO
 ```
 
@@ -26,7 +25,6 @@ Fonte: [Digital Ocean](https://www.digitalocean.com/community/cdtutorials/initia
 ($) <- Símbolo Logado como usuário
 ```
 
-
 ## DESLIGAR E REINICIAR
 Debian 11
 ```
@@ -41,7 +39,6 @@ Demais distros
 (shutdown -h 1) - Desliga o computador em um minuto
 (Ctrl +c) - Cancela a operação
 ```
-
 
 ## DIVERSOS
 ```
@@ -62,7 +59,6 @@ Demais distros
 (touch) - Cria arquivo
 ```
 
-
 ## CRIAR E APAGAR DIRETÓRIO
 ```
 (mkdir -c) - Cria diretórios ex: mkdir documentos
@@ -70,19 +66,17 @@ Demais distros
 (rm -rf) - Apaga tdo sem perguntar
 ```
 
-
 ## EDITOR DE TEXTO(vi)
 É o editor que cai na "certificação LPI"
 ```
 (vi + nome do arquivo) - Cria ou edita arquivo
 (i) - Para escrever em cima do cursor
 (a) - Para escrever a partir do cursor
-(Esc:wq) - Salvar e salva
+(Esc:wq) - Salvar e sair
 (Esc u) - Desfaz o q estava fazendo
 (Esc:q!) - Sai do arquivo sem salvar
 (set number) - Numera as linhas
 ```
-
 
 ## EDIÇÃO
 ```
@@ -91,7 +85,6 @@ Demais distros
 (mv + Nome do arquivo) - Mover ou renomear o arquivo ex: mv Serviços serviços
 (cp) - Faz backup, ex: cp serviços serviços.bkp
 ```
-
 
 ## PESQUISA
 ```
@@ -106,7 +99,6 @@ começa com (l) - É link
 (cat + nome do arquivo) - Visualiza o conteudo do arquivo
 ```
 
-
 ## TECLAS DE ATALHO
 ```
 (Pra cima) - Repete o último comando
@@ -116,11 +108,10 @@ começa com (l) - É link
 (history) - Exibe os mil últimos comando digitados
 ```
 
-
 ## LISTAR UPGRADE
 ```
 
-apt list --upgradeable
+apt list --upgradable
 
 ```
 
@@ -160,14 +151,12 @@ tar xf arquivo.tar arquivo
 # COMANDO KILL
 Comando para parar um processo 
 
-
 ## INTERROMPENDO O PROGRAMA
 ```
 
 kill <numero_PID>
 
 ```
-
 
 ## VERRIFICAR PROGRAMAS QUE ESTÃO SENDO EXECUTADOS
 ```
@@ -176,14 +165,12 @@ top
 
 ```
 
-
 ## MOSTRAR PROGRAMAS EM EXECUÇÃO
 ``` 
 
 ps aux 
 
 ```
-
 
 ## ESPECIFICANDO 
 ``` 
@@ -239,6 +226,7 @@ dpkg-reconfigure keyboard-configuration
 
 ```
 
+
 # ALTERAR O GRUPO DE UM ARQUIVO OU DIRETÓRIO - chgrp (change group)
 **sintexe:**
 ```
@@ -268,7 +256,6 @@ addgroup [nome_grupo]
 
 # COMANDO CHMOD
 
-
 ## PERMISSÃO PARA EXECUTAR SCRIPT .SH
 ```
 
@@ -276,14 +263,12 @@ chmod +x <nome_arquivo>
 
 ```
 
-
 ## COMANDO chmod - ALTERA PERMISSÃO PELO TERMINAL
 ```
 
 chmod +x <arquivo/diretorio>
 
 ```
-
 
 ## COMANDO chmod - ALTERA AS PERMISSÕES DE ACESSO A ARQUIVOS E DIRETÓRIOS
 **Modo de permissões octal**
@@ -296,8 +281,6 @@ chmod [permissões] [arquivos ou diretórios]
 > 1. Execução - 1 
 > 2. Escrita - 2 
 > 3. Leitura - 4
-
-
 
 ## 1 = ligado / 0 = desligado
 
@@ -325,13 +308,11 @@ rwx|
 ---|
 111 = 4 + 2 + 1 = 7|
 
-
 ## PROPRIETÁRIO | GRUPO | OUTROS
 rwx|rw-|rw-
 ---|---|--- 
 111|110|110
 7|6|6
-
 
 ## 766
 > 1. Proprietário > lê,escreve,executa; 
@@ -342,18 +323,15 @@ rw-|r--|x--
 ---|---|---
 6|4|0
 
-
 ## 6	4	0
 > 1. Proprietário > lê, escreve; 
 > 2. Grupo > lê; 
 > 3. Outros > lê
 
-
 ## PERMISSÕES
 Proprietario|Grupo|Outros
 ---|---|---
 rwx|r-x|r-x
-
 
 ## SIGNIFICADOS
 ```
@@ -375,10 +353,9 @@ Permissões|Links|Proprietários|Grupo|Tamanho|Data e Hora|Nome
 ---|---|---|---|---|---|---
 drwxr-xr-x|2|marcus|marcus|4096|13/9/2017|mlssysem
 
-
 ---
-# COMANDO PARA CRIAR ARQUIVO VAZIO - touch
 
+# COMANDO PARA CRIAR ARQUIVO VAZIO - touch
 
 ## CRIANDO ARQUIVO TESTE
 ```
@@ -386,7 +363,6 @@ drwxr-xr-x|2|marcus|marcus|4096|13/9/2017|mlssysem
 sudo touch arquivoteste
 
 ```
-
 
 ## MOSTRAR ARQUIVO CRIADO 
 ```
@@ -456,7 +432,6 @@ $ sudo /etc/init.d/apache2 restart
 
 
 # COMANDO CHOWN
-
 
 ## CHOWN DONO[:GRUPO] ARQUIVO
 
